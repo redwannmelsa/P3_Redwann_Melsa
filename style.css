@@ -17,7 +17,7 @@ header {
   padding: 1em 0;
   display: flex;
   justify-content: center;
-  box-shadow: 0px 0px 10px grey;
+  box-shadow: 0px 0px 15px #d8d6d6;
   position: relative;
 }
 header img {
@@ -53,26 +53,24 @@ header img {
 }
 #explore h1 {
   padding: 0 10vw;
-  font-size: 1.75em;
+  font-size: 1.6em;
   margin: 1em 0 0 0;
 }
 #explore h4 {
-  padding: 0 5vw;
   font-weight: 400;
-  font-size: 1em;
+  font-size: 1.1em;
   margin: 1em;
 }
 #explore button {
   color: white;
-  margin: 0 15vw;
+  margin: 1em 19vw 3em 19vw;
   padding: 0 1em;
   height: 3em;
   border-radius: 2em;
   font-family: Roboto;
-  font-size: 1.2em;
+  font-size: 1.1em;
   border-style: none;
   background: linear-gradient(170deg, #FF79DA, #9356DC);
-  margin-bottom: 3em;
 }
 
 #howto {
@@ -85,11 +83,18 @@ header img {
   display: flex;
   align-items: center;
   border-radius: 1em;
-  box-shadow: 0px 0px 10px grey;
+  box-shadow: 0px 0px 15px #d8d6d6;
   margin: 1em;
+  padding: 0.5em 0;
+}
+#howto .card h3 {
+  font-size: 1em;
 }
 #howto .card:hover {
-  background-color: #e4d5f6;
+  background-color: #f2eafb;
+}
+#howto .card:hover i {
+  color: #9356DC;
 }
 #howto .circle {
   position: relative;
@@ -113,9 +118,9 @@ header img {
 }
 #restaurants .card {
   border-radius: 1em;
-  background-color: pink;
   margin: 2em 0;
-  box-shadow: 0px 0px 10px grey;
+  box-shadow: 0px 0px 15px #d8d6d6;
+  position: relative;
 }
 #restaurants .card img {
   width: 100%;
@@ -127,12 +132,39 @@ header img {
 #restaurants .card .descriptor {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   width: 100%;
 }
-#restaurants .card .descriptor i {
+#restaurants .card .descriptor .descriptor-text {
+  margin: 1em 0;
+}
+#restaurants .card .descriptor .descriptor-text h3 {
+  font-weight: 400;
+}
+#restaurants .card .descriptor .far {
   font-size: 2em;
   margin: 1em;
+  color: black;
+  position: absolute;
+  right: 0px;
+  z-index: 1000;
+}
+#restaurants .card .descriptor .far:hover {
+  z-index: -1000;
+}
+#restaurants .card .descriptor .fas {
+  font-size: 2em;
+  margin: 1em;
+  color: white;
+  position: absolute;
+  right: 0px;
+}
+#restaurants .card .descriptor .fas:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 1000;
 }
 #restaurants .card .descriptor .descriptor-text h2 {
   margin: 0 1rem;
@@ -140,16 +172,36 @@ header img {
 #restaurants .card .descriptor .descriptor-text h3 {
   margin: 0 1rem;
 }
-#restaurants .card p {
-  float: right;
-  position: relative;
-  bottom: 12.5em;
-  right: 1em;
+#restaurants .card .new-tag {
+  position: absolute;
+  right: 5%;
+  top: 5%;
   background-color: lightgreen;
   color: darkgreen;
   font-weight: 600;
   padding: 0.5em 1em;
   border-radius: 0.25em;
+}
+
+footer {
+  padding: 0.5em 1em 2em 1em;
+  background-color: #3f3f3f;
+  color: white;
+}
+footer #footer-logo img {
+  width: 40%;
+  filter: invert(100%);
+  margin: 1em 0em;
+}
+footer .footer-element {
+  display: flex;
+  align-items: center;
+}
+footer .footer-element i {
+  margin-right: 1em;
+}
+footer .footer-element p {
+  margin: 0.25em 0;
 }
 
 /*# sourceMappingURL=style.css.map */
