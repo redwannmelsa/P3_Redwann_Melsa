@@ -1,6 +1,10 @@
 // imports fonts
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap');
 
+// 
+// All variables
+// 
+
 // color palette
 $primary: #9356DC;
 $secondary: #FF79DA;
@@ -14,10 +18,12 @@ $default-font: Roboto;
 // shadows
 $default-shadow: 0px 0px 15px rgb(216, 214, 214);
 
+// setting up the font-family for the entire website
 * {
     font-family: $default-font;
 }
 
+// 0 margin on the body to allow more flexibility with margins and backgrounds in children
 body {
     margin: 0;
 }
@@ -27,6 +33,7 @@ a {
     text-decoration: none;
     color: black;
 }
+
 
 header {
     width: 100%;
@@ -40,6 +47,8 @@ header {
     
     img {
         width: 50%;
+        // for larger resolutions
+        max-width: 20em;
     }
 }
 
@@ -71,6 +80,7 @@ header {
 #explore {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
     font-family: $default-font;
     text-align: center;
@@ -90,7 +100,7 @@ header {
 
     button {
         color: white;
-        margin: 1em 19vw 3em 19vw;
+        margin: 1em 0 3em 0;
         padding: 0 1em;
         height: 3em;
         border-radius: 2em;
@@ -98,11 +108,16 @@ header {
         font-size: 1.1em;
         border-style: none;
         background: linear-gradient(170deg, $secondary, $primary);
+        // for larger resolutions
+        max-width: 13em;
     }
 }
 
 #howto {
     margin: 3em 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     h1 {
         margin-bottom: 2em;
@@ -115,11 +130,17 @@ header {
         box-shadow: $default-shadow;
         margin: 1em;
         padding: 0.5em 0;
+        
 
         h3 {
             font-size: 1em;
+            width: 70vw;
+            // for larger resolutions
+            max-width: 20em;
         }
 
+        // this hover state allows for both the background of the card to turn light primary color
+        // and the icon to turn primary color
         &:hover {
             background-color: lighten($primary, 35);
 
@@ -130,9 +151,10 @@ header {
     }
 
     .circle {
-        position: relative;
         width: 30px;
         height: 30px;
+        // position and left used to push the circle to the outside of the div
+        position: relative;
         left: -15px;
         border-radius: 50%;
         background-color: $primary;
@@ -247,6 +269,7 @@ footer {
     #footer-logo {
         img {
             width: 40%;
+            max-width: 300px;
             filter: invert(100%);
             margin: 1em 0em;
         }
@@ -262,6 +285,36 @@ footer {
 
         p {
             margin: 0.25em 0;
+        }
+    }
+}
+
+
+// some desktop specific css 
+@media screen and (min-width: 600px) {
+
+    #restaurants {
+        .section-title {
+            text-align: center;
+        }
+
+        #restaurant-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1em;
+            justify-content: space-evenly;
+
+            .card img {
+                width: 300px;
+            }
+        }
+    }
+
+    footer {
+        text-align: center;
+
+        .footer-element {
+            justify-content: center;
         }
     }
 }

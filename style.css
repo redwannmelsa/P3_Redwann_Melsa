@@ -22,6 +22,7 @@ header {
 }
 header img {
   width: 50%;
+  max-width: 20em;
 }
 
 #location {
@@ -46,6 +47,7 @@ header img {
 #explore {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
   font-family: Roboto;
   text-align: center;
@@ -63,7 +65,7 @@ header img {
 }
 #explore button {
   color: white;
-  margin: 1em 19vw 3em 19vw;
+  margin: 1em 0 3em 0;
   padding: 0 1em;
   height: 3em;
   border-radius: 2em;
@@ -71,10 +73,14 @@ header img {
   font-size: 1.1em;
   border-style: none;
   background: linear-gradient(170deg, #FF79DA, #9356DC);
+  max-width: 13em;
 }
 
 #howto {
   margin: 3em 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #howto h1 {
   margin-bottom: 2em;
@@ -89,6 +95,8 @@ header img {
 }
 #howto .card h3 {
   font-size: 1em;
+  width: 70vw;
+  max-width: 20em;
 }
 #howto .card:hover {
   background-color: #f2eafb;
@@ -190,6 +198,7 @@ footer {
 }
 footer #footer-logo img {
   width: 40%;
+  max-width: 300px;
   filter: invert(100%);
   margin: 1em 0em;
 }
@@ -202,6 +211,28 @@ footer .footer-element i {
 }
 footer .footer-element p {
   margin: 0.25em 0;
+}
+
+@media screen and (min-width: 600px) {
+  #restaurants .section-title {
+    text-align: center;
+  }
+  #restaurants #restaurant-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: space-evenly;
+  }
+  #restaurants #restaurant-cards .card img {
+    width: 300px;
+  }
+
+  footer {
+    text-align: center;
+  }
+  footer .footer-element {
+    justify-content: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
