@@ -336,10 +336,15 @@ footer {
     background-color: lighten($background, 45);
     margin-top: -3.5em;
     position: relative;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+
 
     #menu-title {
         @import "heart_style";
         display: flex;
+        align-items: center;
     }
 
     #menu-title h1 {
@@ -450,6 +455,40 @@ footer {
 
         .footer-element {
             justify-content: center;
+        }
+    }
+
+    #menu {
+        margin: auto;
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        // text-align: center;
+        top: 10em;
+        border-radius: 3em;
+    }
+
+    #order {
+        
+        overflow-x: hidden;
+        padding: 100px;
+
+        div {
+            padding: 10vh 100vw;
+            background-color: lighten($background, 25);
+        }
+        
+        button {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin-right: auto;
+            margin-left: auto;
+            width: 100%;
+
         }
     }
 }

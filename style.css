@@ -308,9 +308,13 @@ footer .footer-element p {
   background-color: #f3f3f3;
   margin-top: -3.5em;
   position: relative;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
 }
 #menu #menu-title {
   display: flex;
+  align-items: center;
 }
 #menu #menu-title .far {
   font-size: 2em;
@@ -420,6 +424,35 @@ footer .footer-element p {
   }
   footer .footer-element {
     justify-content: center;
+  }
+
+  #menu {
+    margin: auto;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 10em;
+    border-radius: 3em;
+  }
+
+  #order {
+    overflow-x: hidden;
+    padding: 100px;
+  }
+  #order div {
+    padding: 10vh 100vw;
+    background-color: silver;
+  }
+  #order button {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
   }
 }
 
