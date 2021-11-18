@@ -347,7 +347,7 @@ footer {
     border-radius: 1em;
     padding: 0.5em 0;
     margin: 1em 0;
-    animation-name: fade-in;
+    animation-name: fade-in, floaty;
 	animation-fill-mode: both;
 	animation-duration: 0.5s;
 
@@ -397,6 +397,11 @@ footer {
 @keyframes fade-in {
     0% { opacity: 0; }
     100% { opacity: 1; }
+}
+
+@keyframes floaty {
+    0% { transform: translate(0, 0.5em) }
+    100% {transform: translate(0, 0)}
 }
 
 
