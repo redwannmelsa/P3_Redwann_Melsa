@@ -1,0 +1,34 @@
+// this icon will sit on top of the next icon if not mouseovered
+// and it will hide behind the next icon when mouseovered
+// this is done to get the bordered heart visible until mouseovered 
+// then swap to a solid color with no border version of the icon
+.far {
+    font-size: 2em;
+    margin: 1em;
+    color: black;
+    position: absolute;
+    right: 0px;
+    z-index: 1000;
+
+    &:hover {
+        z-index: -1000;
+    }
+}
+
+// this icon will pop over the previous one on mouseover 
+// and change its color to the gradient we want
+.fas {
+    font-size: 2em;
+    margin: 1em;
+    color: white;
+    position: absolute;
+    right: 0px;
+    
+    &:hover {
+        background: -webkit-gradient(linear, left top, left bottom, from($primary), to($secondary));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        z-index: 1000;
+    }
+}

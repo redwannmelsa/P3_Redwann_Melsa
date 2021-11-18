@@ -13,10 +13,30 @@ $background: rgb(128, 128, 128);
 
 // fonts
 $title-font: Shrikhand;
-$default-font: Roboto;
+$default-font: Roboto !default;
 
 // shadows
 $default-shadow: 0px 0px 15px rgb(216, 214, 214);
+
+// all purpose bold class, makes text bold
+.bold {
+    font-weight: 600;
+}
+
+// button class used in multiple pages
+.omf-button {
+    color: white;
+    margin: 1em 0 3em 0;
+    padding: 0 1em;
+    height: 3em;
+    border-radius: 2em;
+    font-family: $default-font;
+    font-size: 1.1em;
+    border-style: none;
+    background: linear-gradient(170deg, $secondary, $primary);
+    // for larger resolutions
+    max-width: 13em;
+}
 
 // setting up the font-family for the entire website
 * {
@@ -49,6 +69,14 @@ header {
         width: 50%;
         // for larger resolutions
         max-width: 20em;
+    }
+
+    .fa-arrow-left {
+        position: absolute;
+        left: 1.2em;
+        top: 1.2em;
+        font-size: 1.25em;
+        color: black;
     }
 }
 
@@ -98,19 +126,6 @@ header {
         margin: 1em;
     }
 
-    button {
-        color: white;
-        margin: 1em 0 3em 0;
-        padding: 0 1em;
-        height: 3em;
-        border-radius: 2em;
-        font-family: $default-font;
-        font-size: 1.1em;
-        border-style: none;
-        background: linear-gradient(170deg, $secondary, $primary);
-        // for larger resolutions
-        max-width: 13em;
-    }
 }
 
 #howto {
@@ -188,11 +203,14 @@ header {
         }
         
         .descriptor {
+            @import "heart_style";
             display: flex;
             justify-content: space-between;
             // this makes our heart sit a little higher on the div
             align-items: flex-end;
             width: 100%;
+
+            
 
             .descriptor-text {
                 margin: 1em 0;
@@ -201,42 +219,6 @@ header {
                     font-weight: 400;
                 }
             }
-
-            // this icon will sit on top of the next icon if not mouseovered
-            // and it will hide behind the next icon when mouseovered
-            // this is done to get the bordered heart visible until mouseovered 
-            // then swap to a solid color with no border version of the icon
-            .far {
-                font-size: 2em;
-                margin: 1em;
-                color: black;
-                position: absolute;
-                right: 0px;
-                z-index: 1000;
-
-                &:hover {
-                    z-index: -1000;
-                }
-            }
-
-            // this icon will pop over the previous one on mouseover 
-            // and change its color to the gradient we want
-            .fas {
-                font-size: 2em;
-                margin: 1em;
-                color: white;
-                position: absolute;
-                right: 0px;
-                
-                &:hover {
-                    background: -webkit-gradient(linear, left top, left bottom, from($primary), to($secondary));
-                    background-clip: text;
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                    z-index: 1000;
-                }
-            }
-        
 
             .descriptor-text {
                 h2 {
@@ -289,7 +271,115 @@ footer {
     }
 }
 
+// 
+// 
+// 
+// 
+// 
+// This is the css for the menu pages
 
+#menu-image {
+    width: 100vw;
+
+    .big-picture {
+        // try to find a way to make it work for larger resolutions
+        height: 256px;
+    }
+
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+#menu {
+    border-top-left-radius: 3em;
+    border-top-right-radius: 3em;
+    padding: 0.5em 1.5em 0.5em 1em;
+    background-color: lighten($background, 45);
+    margin-top: -3.5em;
+    position: relative;
+
+    #menu-title {
+        @import "heart_style";
+        display: flex;
+    }
+
+    #menu-title h1 {
+        font-family: $title-font;
+        font-size: 1.6em;
+        font-weight: 400;
+    }
+
+    #menu-title i {
+        margin-top: 0.6em;
+        margin-right: 1.2em;
+    }
+
+}
+
+// this styles all course titles on the menus
+// adds short underline under the text
+.course-title {
+    h1 {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 1.2em;
+    position: relative;
+
+        &:before{
+            content: "";
+            position: absolute;
+            width: 15%;
+            bottom: -0.2em;
+            left: 0;
+            border-bottom: 4px solid lightgreen;
+        }
+    }
+}
+
+#dish-cards {
+    margin-bottom: 3em;
+}
+
+.dish-card {
+    background-color: white;
+    border-radius: 1em;
+    padding: 0.5em 0;
+    margin: 1em 0;
+
+        .dish-description {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        h2, p {
+            margin: 0.2em 0.75rem;
+        }
+
+        h2 {
+            font-size: 1.1em;
+        }
+
+        p {
+            font-size: 0.89em;
+        }
+}
+
+#order {
+    display: flex;
+    justify-content: center;
+    background-color: lighten($background, 45);
+
+    button {
+        padding: 0 3em;
+    }
+}
+
+// 
+// 
+// 
+// 
 // some desktop specific css 
 @media screen and (min-width: 600px) {
 
@@ -318,3 +408,6 @@ footer {
         }
     }
 }
+
+
+

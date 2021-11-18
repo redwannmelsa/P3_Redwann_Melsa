@@ -5,84 +5,110 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>À la française</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <img src="/images/logo/ohmyfood.png" alt="ohmyfood logo">
+        <a href="./index.html"><i class="fas fa-arrow-left"></i></a>
+    </header>
     <!-- top of the page image from the restaurant -->
     <section id="menu-image">
         <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Photo restaurant À la française">
     </section>
     <section id="menu">
-        <div id="div">
+        <div id="menu-title">
             <h1>À la française</h1>
+            <i class="far fa-heart"></i>
+            <i class="fas fa-heart"></i>
         </div>
         <!-- entrées -->
         <div id="entrées">
             <div class="course-title">
-                <h1>Entrées</h1>
+                <h1>entrées</h1>
             </div>
-            <div id="entrées-cards">
-                <div class="entrées-card">
+            <div id="dish-cards">
+                <div class="dish-card">
                     <h2>Tarte de poulpe acidulé</h2>
-                    <p>Aux zestes d'orange</p>
-                    <p>25€</p>
+                    <div class="dish-description">
+                        <p>Aux zestes d'orange</p>
+                        <p class="bold">25€</p>
+                    </div>
                 </div>
-                <div class="entrées-card">
+                <div class="dish-card">
                     <h2>Velouté de légumes d'antan</h2>
-                    <p>Carotte, panais, topinambour</p>
-                    <p>35€</p>
+                    <div class="dish-description">
+                        <p>Carotte, panais, topinambour</p>
+                        <p class="bold">35€</p>
+                    </div>
                 </div>
-                <div class="entrées-card">
+                <div class="dish-card">
                     <h2>Soupe à l'oignon</h2>
-                    <p>Revisitée</p>
-                    <p>20€</p>
+                    <div class="dish-description">
+                        <p>Revisitée</p>
+                        <p class="bold">20€</p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div id="maincourse">
+        <div id="main-course">
             <div class="course-title">
                 <h1>Plats</h1>
             </div>
-            <div id="maincourse-cards">
-                <div class="maincourse-card">
+            <div id="dish-cards">
+                <div class="dish-card">
                     <h2>Coquilles Saint-Jacques</h2>
-                    <p>Accompagnée d'une purée de panais</p>
-                    <p>40€</p>
+                    <div class="dish-description">
+                        <p>Accompagnée d'une purée de panais</p>
+                        <p class="bold">40€</p>
+                    </div>
                 </div>
-                <div class="maincourse-card">
+                <div class="dish-card">
                     <h2>Magret de canard</h2>
-                    <p>Et parmentier de pommes de terres</p>
-                    <p>35€</p>
+                    <div class="dish-description">
+                        <p>Et parmentier de pommes de terres</p>
+                        <p class="bold">35€</p>
+                    </div>
                 </div>
-                <div class="maincourse-card">
+                <div class="dish-card">
                     <h2>Pigeonneau d'Ille-et-Vilaine</h2>
-                    <p>Sur son lit de gnocchis aux légumes</p>
-                    <p>44€</p>
+                    <div class="dish-description">
+                        <p>Sur son lit de gnocchis aux légumes</p>
+                        <p class="bold">44€</p>
+                    </div>
                 </div>
             </div>
         </div>
         <div id="desserts">
             <div id="course-title">
-                <h1>Desserts</h1>
+                <h1>desserts</h1>
             </div>
-            <div class="dessert-card">
+            <div class="dish-card">
                 <h2>Pétales de violettes glacés</h2>
-                <p>Et purée de noisettes</p>
-                <p>18€</p>
+                <div class="dish-description">
+                    <p>Et purée de noisettes</p>
+                    <p class="bold">18€</p>
+                </div>
             </div>
-            <div class="dessert-card">
+            <div class="dish-card">
                 <h2>Fondant au chocolat</h2>
-                <p>Revisité</p>
-                <p>22€</p>
+                <div class="dish-description">
+                    <p>Revisité</p>
+                    <p class="bold">22€</p>
+                </div>
             </div>
-            <div class="dessert-card">
+            <div class="dish-card">
                 <h2>Millefeuille croustillant</h2>
-                <p>Myrtilles et pâte d'amande</p>
-                <p>23€</p>
+                <div class="dish-description">
+                    <p>Myrtilles et pâte d'amande</p>
+                    <p class="bold">23€</p>
+                </div>
             </div>
         </div>
     </section>
     <section id="order">
-        <button>
+        <button class="omf-button">
             Commander
         </button>
     </section>
