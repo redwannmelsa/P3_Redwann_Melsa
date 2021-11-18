@@ -1,6 +1,7 @@
+@use "sass:math";
+
 // imports fonts
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap');
-
 // 
 // All variables
 // 
@@ -53,6 +54,42 @@ a {
     text-decoration: none;
     color: black;
 }
+
+// 
+// animation keyframes
+
+@keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes floaty {
+    0% { transform: translate(0, 0.5em) }
+    100% {transform: translate(0, 0)}
+}
+
+// functions allowing the card animations to be delayed 
+// depending on their nth-of-type -- the first card is animated first
+// then the second and so on
+
+@for $i from 1 through 4 {
+	#entrées div.dish-card:nth-of-type(#{$i}) {
+		animation-delay: #{math.div($i, 2)}s;
+    }
+}
+
+@for $i from 1 through 4 {
+	#main-course div.dish-card:nth-of-type(#{$i}) {
+		animation-delay: #{math.div((4+$i), 2)}s;
+    }
+}
+
+@for $i from 1 through 4 {
+	#desserts div.dish-card:nth-of-type(#{$i}) {
+		animation-delay: #{math.div((8+$i), 2)}s;
+    }
+}
+
 
 
 header {
@@ -373,37 +410,6 @@ footer {
         }
         
 }
-
-@for $i from 1 through 3 {
-	#entrées div.dish-card:nth-of-type(#{$i}) {
-		animation-delay: #{($i)/2}s;
-    }
-}
-
-@for $i from 1 through 3 {
-	#main-course div.dish-card:nth-of-type(#{$i}) {
-		animation-delay: #{1.5+($i)/2}s;
-    }
-}
-
-@for $i from 1 through 3 {
-	#desserts div.dish-card:nth-of-type(#{$i}) {
-		animation-delay: #{3+($i)/2}s;
-    }
-}
-
-
-
-@keyframes fade-in {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-@keyframes floaty {
-    0% { transform: translate(0, 0.5em) }
-    100% {transform: translate(0, 0)}
-}
-
 
 #order {
     display: flex;

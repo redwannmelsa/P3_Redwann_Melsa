@@ -30,6 +30,70 @@ a {
   color: black;
 }
 
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes floaty {
+  0% {
+    transform: translate(0, 0.5em);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+#entrées div.dish-card:nth-of-type(1) {
+  animation-delay: 0.5s;
+}
+
+#entrées div.dish-card:nth-of-type(2) {
+  animation-delay: 1s;
+}
+
+#entrées div.dish-card:nth-of-type(3) {
+  animation-delay: 1.5s;
+}
+
+#entrées div.dish-card:nth-of-type(4) {
+  animation-delay: 2s;
+}
+
+#main-course div.dish-card:nth-of-type(1) {
+  animation-delay: 2.5s;
+}
+
+#main-course div.dish-card:nth-of-type(2) {
+  animation-delay: 3s;
+}
+
+#main-course div.dish-card:nth-of-type(3) {
+  animation-delay: 3.5s;
+}
+
+#main-course div.dish-card:nth-of-type(4) {
+  animation-delay: 4s;
+}
+
+#desserts div.dish-card:nth-of-type(1) {
+  animation-delay: 4.5s;
+}
+
+#desserts div.dish-card:nth-of-type(2) {
+  animation-delay: 5s;
+}
+
+#desserts div.dish-card:nth-of-type(3) {
+  animation-delay: 5.5s;
+}
+
+#desserts div.dish-card:nth-of-type(4) {
+  animation-delay: 6s;
+}
+
 header {
   width: 100%;
   padding: 1em 0;
@@ -328,58 +392,6 @@ footer .footer-element p {
   background-color: pink;
 }
 
-#entrées div.dish-card:nth-of-type(1) {
-  animation-delay: 0.5s;
-}
-
-#entrées div.dish-card:nth-of-type(2) {
-  animation-delay: 1s;
-}
-
-#entrées div.dish-card:nth-of-type(3) {
-  animation-delay: 1.5s;
-}
-
-#main-course div.dish-card:nth-of-type(1) {
-  animation-delay: 2s;
-}
-
-#main-course div.dish-card:nth-of-type(2) {
-  animation-delay: 2.5s;
-}
-
-#main-course div.dish-card:nth-of-type(3) {
-  animation-delay: 3s;
-}
-
-#desserts div.dish-card:nth-of-type(1) {
-  animation-delay: 3.5s;
-}
-
-#desserts div.dish-card:nth-of-type(2) {
-  animation-delay: 4s;
-}
-
-#desserts div.dish-card:nth-of-type(3) {
-  animation-delay: 4.5s;
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes floaty {
-  0% {
-    transform: translate(0, 0.5em);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-}
 #order {
   display: flex;
   justify-content: center;
