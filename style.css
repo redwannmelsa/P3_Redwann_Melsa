@@ -14,6 +14,8 @@
   font-size: 1.1em;
   border-style: none;
   background: linear-gradient(170deg, #FF79DA, #9356DC);
+  align-items: center;
+  display: flex;
   max-width: 13em;
 }
 
@@ -388,7 +390,8 @@ footer .footer-element p {
 }
 #menu #menu-title i {
   margin-top: 0.6em;
-  margin-right: 1.2em;
+  padding-right: 1em;
+  font-size: 1.5em !important;
 }
 
 .course-title h1 {
