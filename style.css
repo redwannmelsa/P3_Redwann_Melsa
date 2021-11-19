@@ -394,6 +394,10 @@ footer .footer-element p {
   padding-right: 1em;
   font-size: 1.5em !important;
 }
+#menu button {
+  margin: 2em auto;
+  padding: 0 3em;
+}
 
 .course-title h1 {
   text-transform: uppercase;
