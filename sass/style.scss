@@ -70,7 +70,7 @@ a {
 
 @keyframes slide-check {
     0% {width: 0%}
-    100% {width: 15%}
+    100% {width: 25%}
 }
 
 @keyframes spin {
@@ -84,19 +84,19 @@ a {
 
 @for $i from 1 through 10 {
     #entrées div.dish-card:nth-of-type(#{$i}) {
-        animation-delay: #{math.div($i, 4)}s;
+        animation-delay: #{math.div($i, 5)}s;
     }
 }
 
 @for $i from 1 through 4 {
 	#main-course div.dish-card:nth-of-type(#{$i}) {
-		animation-delay: #{math.div((4+$i), 4)}s;
+		animation-delay: #{math.div((4+$i), 5)}s;
     }
 }
 
 @for $i from 1 through 4 {
 	#desserts div.dish-card:nth-of-type(#{$i}) {
-		animation-delay: #{math.div((8+$i), 4)}s;
+		animation-delay: #{math.div((8+$i), 5)}s;
     }
 }
 
@@ -411,10 +411,14 @@ footer {
         .dish-description {
             display: flex;
             justify-content: space-between;
+            margin-right: 0.5em;
         }
 
         h2, p {
             margin: 0.2em 0.75rem;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
         }
 
         h2 {
@@ -425,6 +429,11 @@ footer {
         p {
             font-size: 0.89em;
             margin-bottom: 0.75em;
+            margin-right: 1em;
+        }
+
+        p.bold {
+            text-overflow: clip;
         }
 
         .checked {
@@ -433,22 +442,31 @@ footer {
         }
 
         &:hover {
+            .unchecked {
+                max-width: 80%;
+                margin-right: 0;
+            }
+
+            p.bold {
+                min-width: 2em;
+            }
+
             .checked {
                 display: flex;
                 background-color: lightgreen;
-                width: 15%;
+                width: 20%;
                 align-items: center;
                 justify-content: center;
                 border-top-right-radius: 1em;
                 border-bottom-right-radius: 1em;
                 animation-name: slide-check;
-                animation-duration: 1s;
+                animation-duration: 0.5s;
     
                 .fa-check-circle {
                     color: white;
                     font-size: 1.5em;
                     animation-name: spin;
-                    animation-duration: 1s;
+                    animation-duration: 0.5s;
                     overflow-x: hidden;
                 }
                 

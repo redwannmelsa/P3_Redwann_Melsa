@@ -51,7 +51,7 @@ a {
     width: 0%;
   }
   100% {
-    width: 15%;
+    width: 25%;
   }
 }
 @keyframes spin {
@@ -63,75 +63,75 @@ a {
   }
 }
 #entrées div.dish-card:nth-of-type(1) {
-  animation-delay: 0.25s;
+  animation-delay: 0.2s;
 }
 
 #entrées div.dish-card:nth-of-type(2) {
-  animation-delay: 0.5s;
+  animation-delay: 0.4s;
 }
 
 #entrées div.dish-card:nth-of-type(3) {
-  animation-delay: 0.75s;
+  animation-delay: 0.6s;
 }
 
 #entrées div.dish-card:nth-of-type(4) {
-  animation-delay: 1s;
+  animation-delay: 0.8s;
 }
 
 #entrées div.dish-card:nth-of-type(5) {
-  animation-delay: 1.25s;
+  animation-delay: 1s;
 }
 
 #entrées div.dish-card:nth-of-type(6) {
-  animation-delay: 1.5s;
+  animation-delay: 1.2s;
 }
 
 #entrées div.dish-card:nth-of-type(7) {
-  animation-delay: 1.75s;
+  animation-delay: 1.4s;
 }
 
 #entrées div.dish-card:nth-of-type(8) {
-  animation-delay: 2s;
+  animation-delay: 1.6s;
 }
 
 #entrées div.dish-card:nth-of-type(9) {
-  animation-delay: 2.25s;
+  animation-delay: 1.8s;
 }
 
 #entrées div.dish-card:nth-of-type(10) {
-  animation-delay: 2.5s;
-}
-
-#main-course div.dish-card:nth-of-type(1) {
-  animation-delay: 1.25s;
-}
-
-#main-course div.dish-card:nth-of-type(2) {
-  animation-delay: 1.5s;
-}
-
-#main-course div.dish-card:nth-of-type(3) {
-  animation-delay: 1.75s;
-}
-
-#main-course div.dish-card:nth-of-type(4) {
   animation-delay: 2s;
 }
 
+#main-course div.dish-card:nth-of-type(1) {
+  animation-delay: 1s;
+}
+
+#main-course div.dish-card:nth-of-type(2) {
+  animation-delay: 1.2s;
+}
+
+#main-course div.dish-card:nth-of-type(3) {
+  animation-delay: 1.4s;
+}
+
+#main-course div.dish-card:nth-of-type(4) {
+  animation-delay: 1.6s;
+}
+
 #desserts div.dish-card:nth-of-type(1) {
-  animation-delay: 2.25s;
+  animation-delay: 1.8s;
 }
 
 #desserts div.dish-card:nth-of-type(2) {
-  animation-delay: 2.5s;
+  animation-delay: 2s;
 }
 
 #desserts div.dish-card:nth-of-type(3) {
-  animation-delay: 2.75s;
+  animation-delay: 2.2s;
 }
 
 #desserts div.dish-card:nth-of-type(4) {
-  animation-delay: 3s;
+  animation-delay: 2.4s;
 }
 
 header {
@@ -426,9 +426,13 @@ footer .footer-element p {
 .dish-card .dish-description {
   display: flex;
   justify-content: space-between;
+  margin-right: 0.5em;
 }
 .dish-card h2, .dish-card p {
   margin: 0.2em 0.75rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .dish-card h2 {
   font-size: 1.1em;
@@ -437,26 +441,37 @@ footer .footer-element p {
 .dish-card p {
   font-size: 0.89em;
   margin-bottom: 0.75em;
+  margin-right: 1em;
+}
+.dish-card p.bold {
+  text-overflow: clip;
 }
 .dish-card .checked {
   display: none;
 }
+.dish-card:hover .unchecked {
+  max-width: 80%;
+  margin-right: 0;
+}
+.dish-card:hover p.bold {
+  min-width: 2em;
+}
 .dish-card:hover .checked {
   display: flex;
   background-color: lightgreen;
-  width: 15%;
+  width: 20%;
   align-items: center;
   justify-content: center;
   border-top-right-radius: 1em;
   border-bottom-right-radius: 1em;
   animation-name: slide-check;
-  animation-duration: 1s;
+  animation-duration: 0.5s;
 }
 .dish-card:hover .checked .fa-check-circle {
   color: white;
   font-size: 1.5em;
   animation-name: spin;
-  animation-duration: 1s;
+  animation-duration: 0.5s;
   overflow-x: hidden;
 }
 
