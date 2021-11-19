@@ -46,52 +46,92 @@ a {
     transform: translate(0, 0);
   }
 }
+@keyframes slide-check {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 15%;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
 #entrées div.dish-card:nth-of-type(1) {
-  animation-delay: 0.5s;
+  animation-delay: 0.25s;
 }
 
 #entrées div.dish-card:nth-of-type(2) {
-  animation-delay: 1s;
+  animation-delay: 0.5s;
 }
 
 #entrées div.dish-card:nth-of-type(3) {
-  animation-delay: 1.5s;
+  animation-delay: 0.75s;
 }
 
 #entrées div.dish-card:nth-of-type(4) {
+  animation-delay: 1s;
+}
+
+#entrées div.dish-card:nth-of-type(5) {
+  animation-delay: 1.25s;
+}
+
+#entrées div.dish-card:nth-of-type(6) {
+  animation-delay: 1.5s;
+}
+
+#entrées div.dish-card:nth-of-type(7) {
+  animation-delay: 1.75s;
+}
+
+#entrées div.dish-card:nth-of-type(8) {
   animation-delay: 2s;
 }
 
-#main-course div.dish-card:nth-of-type(1) {
+#entrées div.dish-card:nth-of-type(9) {
+  animation-delay: 2.25s;
+}
+
+#entrées div.dish-card:nth-of-type(10) {
   animation-delay: 2.5s;
 }
 
+#main-course div.dish-card:nth-of-type(1) {
+  animation-delay: 1.25s;
+}
+
 #main-course div.dish-card:nth-of-type(2) {
-  animation-delay: 3s;
+  animation-delay: 1.5s;
 }
 
 #main-course div.dish-card:nth-of-type(3) {
-  animation-delay: 3.5s;
+  animation-delay: 1.75s;
 }
 
 #main-course div.dish-card:nth-of-type(4) {
-  animation-delay: 4s;
+  animation-delay: 2s;
 }
 
 #desserts div.dish-card:nth-of-type(1) {
-  animation-delay: 4.5s;
+  animation-delay: 2.25s;
 }
 
 #desserts div.dish-card:nth-of-type(2) {
-  animation-delay: 5s;
+  animation-delay: 2.5s;
 }
 
 #desserts div.dish-card:nth-of-type(3) {
-  animation-delay: 5.5s;
+  animation-delay: 2.75s;
 }
 
 #desserts div.dish-card:nth-of-type(4) {
-  animation-delay: 6s;
+  animation-delay: 3s;
 }
 
 header {
@@ -373,11 +413,15 @@ footer .footer-element p {
 .dish-card {
   background-color: white;
   border-radius: 1em;
-  padding: 0.5em 0;
   margin: 1em 0;
   animation-name: fade-in, floaty;
   animation-fill-mode: both;
   animation-duration: 0.5s;
+  display: flex;
+  justify-content: space-between;
+}
+.dish-card .unchecked {
+  width: 100%;
 }
 .dish-card .dish-description {
   display: flex;
@@ -388,12 +432,32 @@ footer .footer-element p {
 }
 .dish-card h2 {
   font-size: 1.1em;
+  margin-top: 0.75em;
 }
 .dish-card p {
   font-size: 0.89em;
+  margin-bottom: 0.75em;
 }
-.dish-card:checked {
-  background-color: pink;
+.dish-card .checked {
+  display: none;
+}
+.dish-card:hover .checked {
+  display: flex;
+  background-color: lightgreen;
+  width: 15%;
+  align-items: center;
+  justify-content: center;
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
+  animation-name: slide-check;
+  animation-duration: 1s;
+}
+.dish-card:hover .checked .fa-check-circle {
+  color: white;
+  font-size: 1.5em;
+  animation-name: spin;
+  animation-duration: 1s;
+  overflow-x: hidden;
 }
 
 #order {
