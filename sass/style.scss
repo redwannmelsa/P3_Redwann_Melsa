@@ -37,6 +37,7 @@ $default-shadow: 0px 0px 15px rgb(216, 214, 214);
     background: linear-gradient(170deg, $secondary, $primary);
     // display and align items used to center the text on the button
     align-items: center;
+    justify-content: center;
     display: flex;
     // for larger resolutions
     max-width: 13em;
@@ -494,7 +495,14 @@ footer {
 // 
 // 
 // some desktop specific css 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 900px) {
+
+    header {
+        .fa-arrow-left {
+            font-size: 2em;
+            top: 0.9em;
+        }
+    }
 
     #restaurants {
         .section-title {
@@ -521,6 +529,21 @@ footer {
         }
     }
 
+    #menu-image {
+        // this allows the footer to always be under the menu section
+        min-height: 150vh;
+        background-color: $background;
+
+        img {
+            // max height to fit the menu card
+            max-height: 1400px;
+        }
+        .big-picture {
+            // removes the height restriction used for mobile screens
+            height: 100%;
+        }
+    }
+
     #menu {
         margin: auto;
         position: absolute;
@@ -531,6 +554,15 @@ footer {
         // text-align: center;
         top: 10em;
         border-radius: 3em;
+
+        button {
+            position: sticky;
+            bottom: 2em;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 5em;
+            z-index: 1000;
+        }
     }
 
     #order {
@@ -542,17 +574,11 @@ footer {
             padding: 10vh 100vw;
             background-color: lighten($background, 25);
         }
-        
-        button {
-            position: fixed;
-            bottom: 0;
-            right: 0;
-            left: 0;
-            margin-right: auto;
-            margin-left: auto;
-            width: 100%;
+    }
 
-        }
+    footer {
+        position: relative;
+
     }
 }
 
