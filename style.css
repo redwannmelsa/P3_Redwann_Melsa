@@ -208,6 +208,7 @@ header .fa-arrow-left {
 #howto .card {
   display: flex;
   align-items: center;
+  max-width: 600px;
   border-radius: 1em;
   box-shadow: 0px 0px 15px #d8d6d6;
   margin: 1em;
@@ -507,6 +508,10 @@ footer .footer-element p {
     top: 0.9em;
   }
 
+  #howto {
+    align-items: center;
+  }
+
   #restaurants .section-title {
     text-align: center;
   }
@@ -514,10 +519,13 @@ footer .footer-element p {
     display: flex;
     flex-wrap: wrap;
     gap: 1em;
+    max-width: 1000px;
     justify-content: space-evenly;
+    margin-left: auto;
+    margin-right: auto;
   }
   #restaurants #restaurant-cards .card img {
-    width: 300px;
+    min-width: 450px;
   }
 
   footer {
@@ -528,8 +536,8 @@ footer .footer-element p {
   }
 
   #menu-image {
-    min-height: 150vh;
-    background-color: gray;
+    min-height: 1350px;
+    background-color: #9a9a9a;
   }
   #menu-image img {
     max-height: 1400px;
