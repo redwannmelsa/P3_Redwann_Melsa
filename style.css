@@ -54,7 +54,7 @@ a {
     width: 0%;
   }
   100% {
-    width: 25%;
+    width: 15%;
   }
 }
 @keyframes spin {
@@ -188,7 +188,7 @@ header .fa-arrow-left {
 #explore h1 {
   padding: 0 10vw;
   font-size: 1.6em;
-  margin: 1em 0 0 0;
+  margin: 2em 0 0 0;
 }
 #explore h4 {
   font-weight: 400;
@@ -200,10 +200,10 @@ header .fa-arrow-left {
   margin: 3em 1em;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 #howto h1 {
-  margin-bottom: 2em;
+  margin: 0 0 1em 0.25em;
+  align-items: start;
 }
 #howto .card {
   display: flex;
@@ -214,9 +214,14 @@ header .fa-arrow-left {
   padding: 0.5em 0;
 }
 #howto .card h3 {
-  font-size: 1em;
+  font-size: 1.1em;
   width: 70vw;
   max-width: 20em;
+}
+#howto .card i {
+  font-size: 1.4em;
+  color: #8d8d8d;
+  margin-left: 0.3em;
 }
 #howto .card:hover {
   background-color: #f2eafb;
@@ -291,21 +296,20 @@ header .fa-arrow-left {
 #restaurants .card .descriptor .descriptor-text {
   margin: 1em 0;
 }
-#restaurants .card .descriptor .descriptor-text h3 {
-  font-weight: 400;
-}
 #restaurants .card .descriptor .descriptor-text h2 {
   margin: 0 1rem;
+  font-size: 1.3em;
 }
 #restaurants .card .descriptor .descriptor-text h3 {
   margin: 0 1rem;
+  font-weight: 400;
 }
 #restaurants .card .new-tag {
   position: absolute;
   right: 5%;
   top: 5%;
-  background-color: lightgreen;
-  color: darkgreen;
+  background-color: #98e1cf;
+  color: #0a8e6f;
   font-weight: 600;
   padding: 0.5em 1em;
   border-radius: 0.25em;
@@ -427,6 +431,8 @@ footer .footer-element p {
   animation-duration: 0.5s;
   display: flex;
   justify-content: space-between;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 .dish-card .unchecked {
   width: 100%;
@@ -461,13 +467,16 @@ footer .footer-element p {
   max-width: 80%;
   margin-right: 0;
 }
+.dish-card:hover h2 {
+  width: 210px;
+}
 .dish-card:hover p.bold {
   min-width: 2em;
 }
 .dish-card:hover .checked {
   display: flex;
-  background-color: lightgreen;
-  width: 20%;
+  background-color: #98e1cf;
+  width: 15%;
   align-items: center;
   justify-content: center;
   border-top-right-radius: 1em;
@@ -477,7 +486,7 @@ footer .footer-element p {
 }
 .dish-card:hover .checked .fa-check-circle {
   color: white;
-  font-size: 1.5em;
+  font-size: 1.2em;
   animation-name: spin;
   animation-duration: 0.5s;
   overflow-x: hidden;

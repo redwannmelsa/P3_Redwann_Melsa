@@ -74,7 +74,7 @@ a {
 
 @keyframes slide-check {
     0% {width: 0%}
-    100% {width: 25%}
+    100% {width: 15%}
 }
 
 @keyframes spin {
@@ -168,7 +168,7 @@ header {
     h1 {
         padding: 0 10vw;
         font-size: 1.6em;
-        margin: 1em 0 0 0;
+        margin: 2em 0 0 0;
     }
 
     h4 {
@@ -183,10 +183,10 @@ header {
     margin: 3em 1em;
     display: flex;
     flex-direction: column;
-    align-items: center;
 
     h1 {
-        margin-bottom: 2em;
+        margin: 0 0 1em 0.25em;
+        align-items: start;
     }
 
     .card {
@@ -199,10 +199,16 @@ header {
         
 
         h3 {
-            font-size: 1em;
+            font-size: 1.1em;
             width: 70vw;
             // for larger resolutions
             max-width: 20em;
+        }
+
+        i {
+            font-size: 1.4em;
+            color: lighten($background, 5);
+            margin-left: 0.3em;
         }
 
         // this hover state allows for both the background of the card to turn light primary color
@@ -249,6 +255,7 @@ header {
             width: 100%;
             height: 12em;
             object-fit: cover;
+            // object-position: center bottom;
             border-top-left-radius: 1em;
             border-top-right-radius: 1em;
         }
@@ -261,22 +268,16 @@ header {
             align-items: flex-end;
             width: 100%;
 
-            
-
             .descriptor-text {
                 margin: 1em 0;
 
-                h3 {
-                    font-weight: 400;
-                }
-            }
-
-            .descriptor-text {
                 h2 {
                     margin: 0 1rem;
+                    font-size: 1.3em;
                 }
                 h3 {
                     margin: 0 1rem;
+                    font-weight: 400;
                 }
             }
         }
@@ -285,8 +286,8 @@ header {
             position: absolute;
             right: 5%;
             top: 5%;
-            background-color: lightgreen;
-            color: darkgreen;
+            background-color: rgb(152, 225, 207);
+            color: rgb(10, 142, 111);
             font-weight: 600;
             padding: 0.5em 1em;
             border-radius: 0.25em;
@@ -413,6 +414,8 @@ footer {
 	animation-duration: 0.5s;
     display: flex;
     justify-content: space-between;
+    overflow-y: hidden;
+    overflow-x: hidden;
 
         .unchecked {
             width: 100%;
@@ -457,14 +460,18 @@ footer {
                 margin-right: 0;
             }
 
+            h2 {
+                width: 210px;
+            }
+
             p.bold {
                 min-width: 2em;
             }
 
             .checked {
                 display: flex;
-                background-color: lightgreen;
-                width: 20%;
+                background-color: rgb(152, 225, 207);
+                width: 15%;
                 align-items: center;
                 justify-content: center;
                 border-top-right-radius: 1em;
@@ -474,7 +481,7 @@ footer {
     
                 .fa-check-circle {
                     color: white;
-                    font-size: 1.5em;
+                    font-size: 1.2em;
                     animation-name: spin;
                     animation-duration: 0.5s;
                     overflow-x: hidden;
