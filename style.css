@@ -121,6 +121,30 @@ a {
   animation-delay: 1.6s;
 }
 
+#main-course div.dish-card:nth-of-type(5) {
+  animation-delay: 1.8s;
+}
+
+#main-course div.dish-card:nth-of-type(6) {
+  animation-delay: 2s;
+}
+
+#main-course div.dish-card:nth-of-type(7) {
+  animation-delay: 2.2s;
+}
+
+#main-course div.dish-card:nth-of-type(8) {
+  animation-delay: 2.4s;
+}
+
+#main-course div.dish-card:nth-of-type(9) {
+  animation-delay: 2.6s;
+}
+
+#main-course div.dish-card:nth-of-type(10) {
+  animation-delay: 2.8s;
+}
+
 #desserts div.dish-card:nth-of-type(1) {
   animation-delay: 1.8s;
 }
@@ -135,6 +159,30 @@ a {
 
 #desserts div.dish-card:nth-of-type(4) {
   animation-delay: 2.4s;
+}
+
+#desserts div.dish-card:nth-of-type(5) {
+  animation-delay: 2.6s;
+}
+
+#desserts div.dish-card:nth-of-type(6) {
+  animation-delay: 2.8s;
+}
+
+#desserts div.dish-card:nth-of-type(7) {
+  animation-delay: 3s;
+}
+
+#desserts div.dish-card:nth-of-type(8) {
+  animation-delay: 3.2s;
+}
+
+#desserts div.dish-card:nth-of-type(9) {
+  animation-delay: 3.4s;
+}
+
+#desserts div.dish-card:nth-of-type(10) {
+  animation-delay: 3.6s;
 }
 
 header {
@@ -469,7 +517,7 @@ footer .footer-element p {
   margin-right: 0;
 }
 .dish-card:hover h2 {
-  width: 210px;
+  width: 70%;
 }
 .dish-card:hover p.bold {
   min-width: 2em;
@@ -536,7 +584,7 @@ footer .footer-element p {
   }
 
   #menu-image {
-    min-height: 1350px;
+    min-height: 1300px;
     background-color: #9a9a9a;
   }
   #menu-image img {
