@@ -90,20 +90,15 @@ a {
 // depending on their nth-of-type -- the first card is animated first
 // then the second and so on
 
+
 @for $i from 1 through 10 {
     #entrées div.dish-card:nth-of-type(#{$i}) {
         animation-delay: #{math.div($i, 5)}s;
     }
-}
-
-@for $i from 1 through 10 {
-	#main-course div.dish-card:nth-of-type(#{$i}) {
+    #main-course div.dish-card:nth-of-type(#{$i}) {
 		animation-delay: #{math.div((4+$i), 5)}s;
     }
-}
-
-@for $i from 1 through 10 {
-	#desserts div.dish-card:nth-of-type(#{$i}) {
+    #desserts div.dish-card:nth-of-type(#{$i}) {
 		animation-delay: #{math.div((8+$i), 5)}s;
     }
 }
