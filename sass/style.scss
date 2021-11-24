@@ -72,7 +72,7 @@ a {
 }
 
 @keyframes floaty {
-    0% { transform: translate(0, 0.5em)}
+    0% { transform: translate(0, 2em)}
     100% {transform: translate(0, 0)}
 }
 
@@ -86,12 +86,15 @@ a {
     100% {transform: rotate(359deg);}
 }
 
-// functions allowing the card animations to be delayed 
+// loop allowing the card animations to be delayed 
 // depending on their nth-of-type -- the first card is animated first
 // then the second and so on
 
+// this is set up to accomodate 4 maximum items for each section (entrées/main course/dessert)
+// if more items are added, change the two 4 to the number of items and 8 to 2*number of items
 
-@for $i from 1 through 10 {
+
+@for $i from 1 through 4 {
     #entrées div.dish-card:nth-of-type(#{$i}) {
         animation-delay: #{math.div($i, 5)}s;
     }
@@ -142,9 +145,8 @@ header {
     background-color: lighten($background, 40%);
 
     // these position relative and absolute are used
-    // to allow the city name h4 to be centered on the screen
+    // to allow the city name h3 to be centered on the screen
     // and the icon to be on the left of the h4 with a margin of 20px
-    // needs javascript to make the left parameter a function of h4 size to adapt to different city names
     i {
         position: relative;
         left: -85px;
@@ -510,7 +512,7 @@ footer {
 // 
 // 
 // some desktop specific css 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 700px) {
 
     header {
         .fa-arrow-left {

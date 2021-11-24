@@ -43,7 +43,7 @@ a {
 }
 @keyframes floaty {
   0% {
-    transform: translate(0, 0.5em);
+    transform: translate(0, 2em);
   }
   100% {
     transform: translate(0, 0);
@@ -111,78 +111,6 @@ a {
 
 #desserts div.dish-card:nth-of-type(4) {
   animation-delay: 2.4s;
-}
-
-#entrées div.dish-card:nth-of-type(5) {
-  animation-delay: 1s;
-}
-
-#main-course div.dish-card:nth-of-type(5) {
-  animation-delay: 1.8s;
-}
-
-#desserts div.dish-card:nth-of-type(5) {
-  animation-delay: 2.6s;
-}
-
-#entrées div.dish-card:nth-of-type(6) {
-  animation-delay: 1.2s;
-}
-
-#main-course div.dish-card:nth-of-type(6) {
-  animation-delay: 2s;
-}
-
-#desserts div.dish-card:nth-of-type(6) {
-  animation-delay: 2.8s;
-}
-
-#entrées div.dish-card:nth-of-type(7) {
-  animation-delay: 1.4s;
-}
-
-#main-course div.dish-card:nth-of-type(7) {
-  animation-delay: 2.2s;
-}
-
-#desserts div.dish-card:nth-of-type(7) {
-  animation-delay: 3s;
-}
-
-#entrées div.dish-card:nth-of-type(8) {
-  animation-delay: 1.6s;
-}
-
-#main-course div.dish-card:nth-of-type(8) {
-  animation-delay: 2.4s;
-}
-
-#desserts div.dish-card:nth-of-type(8) {
-  animation-delay: 3.2s;
-}
-
-#entrées div.dish-card:nth-of-type(9) {
-  animation-delay: 1.8s;
-}
-
-#main-course div.dish-card:nth-of-type(9) {
-  animation-delay: 2.6s;
-}
-
-#desserts div.dish-card:nth-of-type(9) {
-  animation-delay: 3.4s;
-}
-
-#entrées div.dish-card:nth-of-type(10) {
-  animation-delay: 2s;
-}
-
-#main-course div.dish-card:nth-of-type(10) {
-  animation-delay: 2.8s;
-}
-
-#desserts div.dish-card:nth-of-type(10) {
-  animation-delay: 3.6s;
 }
 
 header {
@@ -550,7 +478,7 @@ footer .footer-element p {
   padding: 0 3em;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 700px) {
   header .fa-arrow-left {
     font-size: 2em;
     top: 0.9em;
