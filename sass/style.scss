@@ -93,6 +93,9 @@ a {
 // this is set up to accomodate 4 maximum items for each section (entrées/main course/dessert)
 // if more items are added, change the two 4 to the number of items
 
+// javascript getElementById getElementByClassName can be used to make these
+// loops work depending on the number of div.dish-card to get a more accurate delay
+// between #entrées, #main-course and #desserts
 
 @for $i from 1 through 4 {
     #entrées div.dish-card:nth-of-type(#{$i}) {
