@@ -91,18 +91,22 @@ a {
 // then the second and so on
 
 // this is set up to accomodate 4 maximum items for each section (entrées/main course/dessert)
-// if more items are added, change the two 4 to the number of items and 8 to 2*number of items
+// if more items are added, change the two 4 to the number of items
 
 
 @for $i from 1 through 4 {
     #entrées div.dish-card:nth-of-type(#{$i}) {
         animation-delay: #{math.div($i, 5)}s;
     }
-    #main-course div.dish-card:nth-of-type(#{$i}) {
-		animation-delay: #{math.div((4+$i), 5)}s;
-    }
-    #desserts div.dish-card:nth-of-type(#{$i}) {
-		animation-delay: #{math.div((8+$i), 5)}s;
+    @for $j from 1 through 4 {
+        #main-course div.dish-card:nth-of-type(#{$j}) {
+            animation-delay: #{math.div($j+$i, 5)}s;
+        };
+        @for $k from 1 through 4 {
+            #desserts div.dish-card:nth-of-type(#{$k}) {
+                animation-delay: #{math.div($k+$j+$i, 5)}s;
+            }
+        }
     }
 }
 
@@ -421,7 +425,7 @@ footer {
     justify-content: space-between;
     overflow-y: hidden;
     overflow-x: hidden;
-
+    
         .unchecked {
             width: 100%;
         }
