@@ -49,7 +49,7 @@ $active-shadow: 5px 5px 10px rgb(180, 180, 180);
     max-width: 13em;
 
     &:hover {
-        background: linear-gradient(170deg, lighten($secondary, 10), lighten($primary, 10));
+        background: linear-gradient(170deg, lighten($secondary, 5), lighten($primary, 5));
         box-shadow: $active-shadow;
     }
 }
