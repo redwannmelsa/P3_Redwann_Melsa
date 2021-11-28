@@ -18,7 +18,7 @@
 .loader-container {
   width: 100vw;
   height: 100vh;
-  animation: hideAnimation 0s ease-in 2s;
+  animation: hideAnimation 0s ease-in 1.7s;
   animation-fill-mode: forwards;
 }
 
