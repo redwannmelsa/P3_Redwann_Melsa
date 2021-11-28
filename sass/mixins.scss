@@ -24,16 +24,18 @@
         color: white;
         position: absolute;
         right: 0px;
+        opacity: 0;
+        transition: opacity 2s linear;
         
         &:hover {
-            background: -webkit-gradient(linear, left top, left bottom, from($primary), to($secondary));
+            background: linear-gradient(210deg, $primary 35%, $secondary 100%);
+            opacity: 1;
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             z-index: 1000;
-            animation-name: color-fill;
-            animation-duration: 200ms;
         }
     }
 }
+
 

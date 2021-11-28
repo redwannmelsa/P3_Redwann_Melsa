@@ -106,7 +106,6 @@ a {
     transform: rotate(359deg);
   }
 }
-@keyframes color-fill {}
 #entrées div.dish-card:nth-of-type(1) {
   animation-delay: 0.2s;
 }
@@ -592,15 +591,16 @@ header .fa-arrow-left {
   color: white;
   position: absolute;
   right: 0px;
+  opacity: 0;
+  transition: opacity 2s linear;
 }
 #restaurants .card .descriptor .fas:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(210deg, #9356DC 35%, #FF79DA 100%);
+  opacity: 1;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   z-index: 1000;
-  animation-name: color-fill;
-  animation-duration: 200ms;
 }
 #restaurants .card .descriptor .descriptor-text {
   margin: 1em 0;
@@ -689,15 +689,16 @@ footer .footer-element p {
   color: white;
   position: absolute;
   right: 0px;
+  opacity: 0;
+  transition: opacity 2s linear;
 }
 #menu #menu-title .fas:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(210deg, #9356DC 35%, #FF79DA 100%);
+  opacity: 1;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   z-index: 1000;
-  animation-name: color-fill;
-  animation-duration: 200ms;
 }
 #menu #menu-title h1 {
   font-family: Shrikhand;

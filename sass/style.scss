@@ -93,10 +93,6 @@ a {
     100% {transform: rotate(359deg);}
 }
 
-@keyframes color-fill {
-    0% {}
-}
-
 // loop allowing the card animations to be delayed 
 // depending on their nth-of-type -- the first card is animated first
 // then the second and so on
