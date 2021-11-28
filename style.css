@@ -19,6 +19,10 @@
   display: flex;
   max-width: 13em;
 }
+.omf-button:hover {
+  background: linear-gradient(170deg, #fface8, #ae80e5);
+  box-shadow: 5px 5px 10px #b4b4b4;
+}
 
 * {
   font-family: Roboto;
@@ -558,6 +562,36 @@ header .fa-arrow-left {
   -webkit-text-fill-color: transparent;
   z-index: 1000;
 }
+#restaurants .card .descriptor .fas-1 {
+  background: pink !important;
+}
+#restaurants .card .descriptor .fas-2 {
+  background: #e3abb4 !important;
+}
+#restaurants .card .descriptor .fas-3 {
+  background: #c6959e !important;
+}
+#restaurants .card .descriptor .fas-4 {
+  background: #aa8087 !important;
+}
+#restaurants .card .descriptor .fas-5 {
+  background: #8e6b71 !important;
+}
+#restaurants .card .descriptor .fas-6 {
+  background: #71555a !important;
+}
+#restaurants .card .descriptor .fas-7 {
+  background: #554044 !important;
+}
+#restaurants .card .descriptor .fas-8 {
+  background: #392b2d !important;
+}
+#restaurants .card .descriptor .fas-9 {
+  background: #1c1517 !important;
+}
+#restaurants .card .descriptor .fas-10 {
+  background: black !important;
+}
 #restaurants .card .descriptor .descriptor-text {
   margin: 1em 0;
 }
@@ -652,6 +686,36 @@ footer .footer-element p {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   z-index: 1000;
+}
+#menu #menu-title .fas-1 {
+  background: pink !important;
+}
+#menu #menu-title .fas-2 {
+  background: #e3abb4 !important;
+}
+#menu #menu-title .fas-3 {
+  background: #c6959e !important;
+}
+#menu #menu-title .fas-4 {
+  background: #aa8087 !important;
+}
+#menu #menu-title .fas-5 {
+  background: #8e6b71 !important;
+}
+#menu #menu-title .fas-6 {
+  background: #71555a !important;
+}
+#menu #menu-title .fas-7 {
+  background: #554044 !important;
+}
+#menu #menu-title .fas-8 {
+  background: #392b2d !important;
+}
+#menu #menu-title .fas-9 {
+  background: #1c1517 !important;
+}
+#menu #menu-title .fas-10 {
+  background: black !important;
 }
 #menu #menu-title h1 {
   font-family: Shrikhand;

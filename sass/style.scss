@@ -22,6 +22,7 @@ $default-font: Roboto;
 
 // shadows
 $default-shadow: 0px 0px 15px rgb(216, 214, 214);
+$active-shadow: 5px 5px 10px rgb(180, 180, 180);
 
 // all purpose bold class, makes text bold
 .bold {
@@ -45,6 +46,11 @@ $default-shadow: 0px 0px 15px rgb(216, 214, 214);
     display: flex;
     // for larger resolutions
     max-width: 13em;
+
+    &:hover {
+        background: linear-gradient(170deg, lighten($secondary, 10), lighten($primary, 10));
+        box-shadow: $active-shadow;
+    }
 }
 
 // setting up the font-family for the entire website
