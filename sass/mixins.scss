@@ -31,11 +31,8 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             z-index: 1000;
-        }
-    }
-    @for $i from 0 to 10 {
-        .fas-#{$i + 1} {
-            background: mix(black, pink, percentage(math.div($i, 10 - 1))) !important;
+            animation-name: color-fill;
+            animation-duration: 200ms;
         }
     }
 }
