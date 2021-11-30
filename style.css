@@ -584,6 +584,7 @@ header .fa-arrow-left {
 }
 #restaurants .card .descriptor .far:hover {
   z-index: -1000;
+  color: white;
 }
 #restaurants .card .descriptor .fas {
   font-size: 2em;
@@ -592,7 +593,7 @@ header .fa-arrow-left {
   position: absolute;
   right: 0px;
   opacity: 0;
-  transition: opacity 2s linear;
+  transition: opacity 500ms linear;
 }
 #restaurants .card .descriptor .fas:hover {
   background: linear-gradient(210deg, #9356DC 35%, #FF79DA 100%);
@@ -682,6 +683,7 @@ footer .footer-element p {
 }
 #menu #menu-title .far:hover {
   z-index: -1000;
+  color: white;
 }
 #menu #menu-title .fas {
   font-size: 2em;
@@ -690,7 +692,7 @@ footer .footer-element p {
   position: absolute;
   right: 0px;
   opacity: 0;
-  transition: opacity 2s linear;
+  transition: opacity 500ms linear;
 }
 #menu #menu-title .fas:hover {
   background: linear-gradient(210deg, #9356DC 35%, #FF79DA 100%);

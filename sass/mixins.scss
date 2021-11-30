@@ -13,6 +13,7 @@
 
         &:hover {
             z-index: -1000;
+            color: white;
         }
     }
 
@@ -25,7 +26,7 @@
         position: absolute;
         right: 0px;
         opacity: 0;
-        transition: opacity 2s linear;
+        transition: opacity 500ms linear;
         
         &:hover {
             background: linear-gradient(210deg, $primary 35%, $secondary 100%);
