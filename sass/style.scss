@@ -438,6 +438,7 @@ footer {
     
         .unchecked {
             width: 100%;
+            max-width: 100%;
         }
 
         .dish-description {
@@ -466,6 +467,7 @@ footer {
 
         p.bold {
             text-overflow: clip;
+            min-width: 0;
         }
 
         .checked {
@@ -475,16 +477,19 @@ footer {
 
         &:hover, &:active, &:focus {
             .unchecked {
-                max-width: 80%;
+                max-width: 85%;
                 margin-right: 0;
+                transition: max-width 0.5s;
             }
 
             h2 {
-                width: 70%;
+                width: 80%;
             }
 
             p.bold {
                 min-width: 2em;
+                margin-right: 0;
+                margin-left: 0;
             }
 
             .checked {

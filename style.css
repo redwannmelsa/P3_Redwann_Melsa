@@ -750,6 +750,7 @@ footer .footer-element p {
 }
 .dish-card .unchecked {
   width: 100%;
+  max-width: 100%;
 }
 .dish-card .dish-description {
   display: flex;
@@ -773,19 +774,23 @@ footer .footer-element p {
 }
 .dish-card p.bold {
   text-overflow: clip;
+  min-width: 0;
 }
 .dish-card .checked {
   display: none;
 }
 .dish-card:hover .unchecked, .dish-card:active .unchecked, .dish-card:focus .unchecked {
-  max-width: 80%;
+  max-width: 85%;
   margin-right: 0;
+  transition: max-width 0.5s;
 }
 .dish-card:hover h2, .dish-card:active h2, .dish-card:focus h2 {
-  width: 70%;
+  width: 80%;
 }
 .dish-card:hover p.bold, .dish-card:active p.bold, .dish-card:focus p.bold {
   min-width: 2em;
+  margin-right: 0;
+  margin-left: 0;
 }
 .dish-card:hover .checked, .dish-card:active .checked, .dish-card:focus .checked {
   display: flex;
