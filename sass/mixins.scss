@@ -11,7 +11,7 @@
         right: 0px;
         z-index: 1000;
 
-        &:hover {
+        &:hover, &:active, &:focus {
             z-index: -1000;
             color: white;
         }
@@ -28,7 +28,7 @@
         opacity: 0;
         transition: opacity 500ms linear;
         
-        &:hover {
+        &:hover, &:active, &:focus {
             background: linear-gradient(210deg, $primary 35%, $secondary 100%);
             opacity: 1;
             background-clip: text;

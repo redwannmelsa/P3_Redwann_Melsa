@@ -48,7 +48,7 @@ $active-shadow: 5px 5px 10px rgb(180, 180, 180);
     // for larger resolutions
     max-width: 13em;
 
-    &:hover {
+    &:hover, &:active, &:focus {
         background: linear-gradient(170deg, lighten($secondary, 5), lighten($primary, 5));
         box-shadow: $active-shadow;
     }
@@ -232,7 +232,7 @@ header {
 
         // this hover state allows for both the background of the card to turn light primary color
         // and the icon to turn primary color
-        &:hover {
+        &:hover, &:active, &:focus {
             background-color: lighten($primary, 35);
 
             i {
@@ -473,7 +473,7 @@ footer {
             
         }
 
-        &:hover {
+        &:hover, &:active, &:focus {
             .unchecked {
                 max-width: 80%;
                 margin-right: 0;

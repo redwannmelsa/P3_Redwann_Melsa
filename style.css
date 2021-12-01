@@ -56,7 +56,7 @@
   display: flex;
   max-width: 13em;
 }
-.omf-button:hover {
+.omf-button:hover, .omf-button:active, .omf-button:focus {
   background: linear-gradient(170deg, #ff93e1, #a16be0);
   box-shadow: 5px 5px 10px #b4b4b4;
 }
@@ -529,10 +529,10 @@ header .fa-arrow-left {
   color: #8d8d8d;
   margin-left: 0.3em;
 }
-#howto .card:hover {
+#howto .card:hover, #howto .card:active, #howto .card:focus {
   background-color: #f2eafb;
 }
-#howto .card:hover i {
+#howto .card:hover i, #howto .card:active i, #howto .card:focus i {
   color: #9356DC;
 }
 #howto .circle {
@@ -582,7 +582,7 @@ header .fa-arrow-left {
   right: 0px;
   z-index: 1000;
 }
-#restaurants .card .descriptor .far:hover {
+#restaurants .card .descriptor .far:hover, #restaurants .card .descriptor .far:active, #restaurants .card .descriptor .far:focus {
   z-index: -1000;
   color: white;
 }
@@ -595,7 +595,7 @@ header .fa-arrow-left {
   opacity: 0;
   transition: opacity 500ms linear;
 }
-#restaurants .card .descriptor .fas:hover {
+#restaurants .card .descriptor .fas:hover, #restaurants .card .descriptor .fas:active, #restaurants .card .descriptor .fas:focus {
   background: linear-gradient(210deg, #9356DC 35%, #FF79DA 100%);
   opacity: 1;
   background-clip: text;
@@ -681,7 +681,7 @@ footer .footer-element p {
   right: 0px;
   z-index: 1000;
 }
-#menu #menu-title .far:hover {
+#menu #menu-title .far:hover, #menu #menu-title .far:active, #menu #menu-title .far:focus {
   z-index: -1000;
   color: white;
 }
@@ -694,7 +694,7 @@ footer .footer-element p {
   opacity: 0;
   transition: opacity 500ms linear;
 }
-#menu #menu-title .fas:hover {
+#menu #menu-title .fas:hover, #menu #menu-title .fas:active, #menu #menu-title .fas:focus {
   background: linear-gradient(210deg, #9356DC 35%, #FF79DA 100%);
   opacity: 1;
   background-clip: text;
@@ -777,17 +777,17 @@ footer .footer-element p {
 .dish-card .checked {
   display: none;
 }
-.dish-card:hover .unchecked {
+.dish-card:hover .unchecked, .dish-card:active .unchecked, .dish-card:focus .unchecked {
   max-width: 80%;
   margin-right: 0;
 }
-.dish-card:hover h2 {
+.dish-card:hover h2, .dish-card:active h2, .dish-card:focus h2 {
   width: 70%;
 }
-.dish-card:hover p.bold {
+.dish-card:hover p.bold, .dish-card:active p.bold, .dish-card:focus p.bold {
   min-width: 2em;
 }
-.dish-card:hover .checked {
+.dish-card:hover .checked, .dish-card:active .checked, .dish-card:focus .checked {
   display: flex;
   background-color: #98e1cf;
   width: 15%;
@@ -798,7 +798,7 @@ footer .footer-element p {
   animation-name: slide-check;
   animation-duration: 0.5s;
 }
-.dish-card:hover .checked .fa-check-circle {
+.dish-card:hover .checked .fa-check-circle, .dish-card:active .checked .fa-check-circle, .dish-card:focus .checked .fa-check-circle {
   color: white;
   font-size: 1.2em;
   animation-name: spin;
